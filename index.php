@@ -92,7 +92,7 @@ require('dbconn.php');
                 <option value="GR">general readers</option>
                 <option value="SubR">subject readers</option>
                 <option value="SpecR">special readers</option>
-                <option value="NaR">non- reading</option>
+                <option value="NaR">not a reader</option>
             </select>
             <br>
 
