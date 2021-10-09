@@ -32,14 +32,12 @@ if ($_SESSION['Code']) {
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                  <li class=""><a href="index.php"><i class="lni lni-home"></i>Home   </a></li>
-                                <li><a href="message.php"><i class="lni lni-dropbox-original"></i>Messages</a>
+                                 <li><a href="message.php">  <i class="lni lni-inbox"></i></i>Messages</a>
                                 </li>
                                 </li>
                                 <li><a href="book.php" ><i class="lni lni-book"></i>All Books </a>
                                 </li>
-                                <li><a href="history.php"><i class="menu-icon icon-tasks"></i>Previously Borrowed Books </a></li>
                                 <li><a href="recommendations.php"><i class="lni lni-customer"></i>Book Recommendations </a></li>
-                                <li><a href="current.php"><i class="lni lni-checkbox"></i>Currently Issued Books </a></li>
                                                             <li class="divider"></li>
                             <li><a href="logout.php"><i class="lni lni-pointer-left"></i>Logout </a></li>
                      </ul>
@@ -54,7 +52,7 @@ if ($_SESSION['Code']) {
         <!-- /navbar -->
         <div class="container">
             <div class="row">
-                    <div class="span9">
+                    <div class="span9" style="display:contents;">
                         <table class="table" id = "tables">
                                   <thead>
                                     <tr>
@@ -84,11 +82,19 @@ if ($_SESSION['Code']) {
                                <?php } ?>
                                </tbody>
                                 </table>
-                                <div class="footer">
-            <div class="container">
+                            
+        <div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
+            
                 <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
         </div>
+
                             </div>
                     <!--/.span3-->
                     

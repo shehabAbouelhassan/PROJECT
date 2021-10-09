@@ -5,7 +5,6 @@ require('dbconn.php');
 //checking of the avilability and getting the value
 $bookid=$_GET['id1'];
 $Code=$_GET['id2'];
-
 //fetching and returning the data in 
  //accordance with the declared valriable
 $sql="select Category from LMS.user where Code='$Code'";

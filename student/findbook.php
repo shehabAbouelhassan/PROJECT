@@ -38,7 +38,6 @@ if ($_SESSION['Code']) {
                                 <li><a href="book.php" ><i class="lni lni-book"></i>All Books </a>
                                 </li>
                                 <li><a href="recommendations.php"><i class="lni lni-customer"></i>Book Recommendations </a></li>
-                                <li><a href="current.php"><i class="lni lni-checkbox"></i>Currently Issued Books </a></li>
                                                             <li class="divider"></li>
                             <li><a href="logout.php"><i class="lni lni-pointer-left"></i>Logout </a></li>
                      </ul>
@@ -75,11 +74,19 @@ if ($_SESSION['Code']) {
             </div>
             <!--/.container-->
         </div>
-<div class="footer">
-            <div class="container">
-            <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
+
+        <div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
+            
+                <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
         </div>
+
         
         <!--/.wrapper-->
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

@@ -32,7 +32,7 @@ if ($_SESSION['Code']) {
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                  <li class=""><a href="index.php"><i class="lni lni-home"></i>Home   </a></li>
-                                <li><a href="message.php"><i class="lni lni-dropbox-original"></i>Messages</a>
+                                <li><a href="message.php">  <i class="lni lni-inbox"></i></i>Messages</a>
                                 </li>
                                 <li><a href="student.php"><i class="lni lni-consulting"></i>Manage Students </a>
                                 </li>
@@ -68,11 +68,14 @@ if ($_SESSION['Code']) {
   </div>
   <!--/.span3-->
 
-                    <div class="span9">
+                    <div class="span9" style="
+    display: contents;">
                         <form class="form-horizontal row-fluid" action="student.php" method="post">
                                         <div class="control-group">
-                                            <label class="control-label" for="Search"><b>Search:</b></label>
-                                            <div class="controls">
+                                            <label class="control-label" for="Search" style=" position: absolute;"><b>Search:</b></label>
+                                            <div class="controls" style="    display: initial;
+                                                                            padding-left: 20px;
+                                                                            margin-left: 180px ">
                                                 <input type="text" id="title" name="title" placeholder="Enter Name/Code of Student" class="span8" required>
                                                 <button type="submit" name="submit"class="btn">Search</button>
                                             </div>
@@ -137,11 +140,19 @@ if ($_SESSION['Code']) {
             </div>
             <!--/.container-->
         </div>
-<div class="footer">
-            <div class="container">
+
+        <div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
+            
                 <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
         </div>
+
         
         <!--/.wrapper-->
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

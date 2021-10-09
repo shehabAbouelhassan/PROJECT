@@ -5,6 +5,19 @@ require('dbconn.php');
 <?php 
 if ($_SESSION['Code']) {
     ?>
+    <?php 
+    
+    if(isset($REQUEST['delete'])){
+        $sql = "DELETE FROM recommendations WHERE R_ID = 15";
+        if($conn->query($sql) === TRUE){
+            echo "Record Deleted Successfully";
+        }
+        else{
+            echo "Ynable";
+        }
+    }
+    
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +68,7 @@ if ($_SESSION['Code']) {
         <!-- /navbar -->
         <div class="container">
             <div class="row">
+ <h2 style="text-align: center;margin-block: 26px;justify-content: center;display: flex;">Accpeted book Recommendations</h2>
   <div class="span3">
     <!-- sidebar with styled menu -->
     <div class="sidebar">
@@ -69,13 +83,17 @@ if ($_SESSION['Code']) {
   <!--/.span3-->
                     
 
-                    <div class="span9">
+                    <div class="span9" style="
+    display: contents;">
                         <table class="table" id = "tables">
                                   <thead>
                                     <tr>
+                                        <th>RID</th>
                                       <th>Book Name</th>
                                       <th>Description</th>
                                       <th>Recommended By</th>
+                                      <th>Approved </th> 
+                                      <th>Action </th>
                                     </tr>
                                   </thead>
                                   <tbody>
@@ -83,16 +101,22 @@ if ($_SESSION['Code']) {
                             $sql="select * from LMS.recommendations";
                             $result=$conn->query($sql);
                             while($row=$result->fetch_assoc())
-                            {
+                            {   $rid=$row['RID'];
                                 $bookname=$row['Book_Name'];
                                 $description=$row['Description'];
                                 $Code=$row['Code'];
+                                $accepted=$row['Accepted'];
                             ?>
                                     <tr>
+                                        <td><?php echo $rid ?></td>
                                       <td><?php echo $bookname ?></td>
                                       <td><?php echo $description?></td>
                                       <td><b><?php echo strtoupper($Code)?></b></td>
-
+                                      <td><?php echo $accepted?></td>
+                                      <td><a href="delete.php?id1=<?php echo $rid ?>&id2=<?php echo $Code ?>" class="btn btn-danger">Reject</a>
+                                      <a href="acceptre.php?id1=<?php echo $rid ?>&id2=<?php echo $Code ?>" class="btn btn-success">Accept</a>
+                                      
+                                    </td>
                                     </tr>
                                <?php } ?>
                                </tbody>
@@ -106,8 +130,13 @@ if ($_SESSION['Code']) {
             </div>
             <!--/.container-->
         </div>
-<div class="footer">
-            <div class="container">
+<div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
                 <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
         </div>

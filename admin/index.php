@@ -34,14 +34,13 @@ if ($_SESSION['Code']) {
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="index.php">LS </a>
-                        <!--Dropdown-toogle within the navbar -->
-                      <ul class="nav pull-right">
+                    <ul class="nav pull-right">
                             <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                  <li class=""><a href="index.php"><i class="lni lni-home"></i>Home   </a></li>
-                                <li><a href="message.php"><i class="lni lni-dropbox-original"></i>Messages</a>
+                                <li><a href="message.php">  <i class="lni lni-inbox"></i></i>Messages</a>
                                 </li>
                                 <li><a href="student.php"><i class="lni lni-consulting"></i>Manage Students </a>
                                 </li>
@@ -56,7 +55,6 @@ if ($_SESSION['Code']) {
                             </li>
                         </ul>
                          <!-- /Dropdown-toogle within the navbar -->
-                        
                     <!-- /.nav-collapse -->
                 </div>
             </div>
@@ -80,14 +78,25 @@ if ($_SESSION['Code']) {
         <!-- /navbar -->
             <div class="container">
             <div class="row">
-            <div class="span3">
+            <div class="span3" style="    display: flex;
+    padding-block: 57px;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;">
         
   
   
 
 
   
-                    <div class="span9">
+                    <div class="span9" style="
+    display: contents;
+"
+                    >
                     <div class="card" style="width: 70%;">
                         <img class="card-img-top" src="images/img_avatar1.png" alt="Card image">
                              
@@ -112,7 +121,7 @@ if ($_SESSION['Code']) {
                                     
                                     <h1 class="card-title"><?php echo "Current Session- ", $name ?></left></h1>
                                     
-                                    <p><b>User Name: </b><?php echo $Code ?></p>
+                                    <p><b>User Code: </b><?php echo $Code ?></p>
                                     
                                     <p><b>Mobile number: </b><?php echo $mobno ?></p>
                                     </b>
@@ -131,11 +140,17 @@ if ($_SESSION['Code']) {
                 
             </div>
             <!--/.container-->
-            <div class="footer">
-            <div class="container">
+            <div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
+            
                 <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
-        
+        </div>
         
         <!--/.wrapper-->
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

@@ -33,7 +33,7 @@ if ($_SESSION['Code']) {
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                  <li class=""><a href="index.php"><i class="lni lni-home"></i>Home   </a></li>
-                                <li><a href="message.php"><i class="lni lni-dropbox-original"></i>Messages</a>
+                                <li><a href="message.php">  <i class="lni lni-inbox"></i></i>Messages</a>
                                 </li>
                                 <li><a href="student.php"><i class="lni lni-consulting"></i>Manage Students </a>
                                 </li>
@@ -71,7 +71,9 @@ if ($_SESSION['Code']) {
 
                     
                     <!--/.span9-->
-                    <div class="span9">
+                    <div class="span9" style="
+    display: contents;
+">
                     <div class="content">
 
                         <div class="module">
@@ -146,8 +148,14 @@ if ($_SESSION['Code']) {
         </div>
 
 
-<div class="footer">
-            <div class="container">
+<div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
+            
                 <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
         </div>

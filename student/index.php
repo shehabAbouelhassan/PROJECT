@@ -27,17 +27,20 @@ require('dbconn.php');
                             <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
+
                                 <ul class="dropdown-menu">
-                                 <li class=""><a href="index.php"><i class="lni lni-home"></i>Home   </a></li>
-                                <li><a href="message.php"><i class="lni lni-dropbox-original"></i>Messages</a>
+                                <li class=""><a href="index.php"><i class="lni lni-home"></i>Home   </a></li>
+                                <li><a href="message.php">  <i class="lni lni-inbox"></i></i>Messages</a>
                                 </li>
-                                </li>
+                               
                                 <li><a href="book.php" ><i class="lni lni-book"></i>All Books </a>
                                 </li>
-                                <li><a href="history.php"><i class="menu-icon icon-tasks"></i>Previously Borrowed Books </a></li>
+                               
                                 <li><a href="recommendations.php"><i class="lni lni-customer"></i>Book Recommendations </a></li>
-                                <li><a href="current.php"><i class="lni lni-checkbox"></i>Currently Issued Books </a></li>
-                                                            <li class="divider"></li>
+                                
+                                
+                                </li>
+                              
                             <li><a href="logout.php"><i class="lni lni-pointer-left"></i>Logout </a></li>
                      </ul>
                             </li>
@@ -49,11 +52,42 @@ require('dbconn.php');
             <!-- /navbar-inner -->
         </div>
         <!-- /navbar -->
-        <div class="container">
+       <div class="container">
             <div class="row">
+  <div class="span3">
+    <!-- sidebar with styled menu -->
+    <div class="sidebar">
+      <ul class="widget widget-menu styled">
+      <!-- listing itmes within the sidebar menu -->
+        
+      </ul>
+      
+    </div>
+    <!--/.sidebar-->
+  </div>
+  <!--/.span3-->
+        <!-- /navbar -->
+            <div class="container">
+            <div class="row">
+            <div class="span3" style="    display: flex;
+    padding-block: 57px;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;">
+        
   
   
-                    <div class="span9">
+
+
+  
+                    <div class="span9" style="
+    display: contents;
+"
+                    >
                     <div class="card" style="width: 70%;">
                         <img class="card-img-top" src="images/img_avatar1.png" alt="Card image">
                              
@@ -78,7 +112,7 @@ require('dbconn.php');
                                     
                                     <h1 class="card-title"><?php echo "Current Session- ", $name ?></left></h1>
                                     
-                                    <p><b>User Name: </b><?php echo $Code ?></p>
+                                    <p><b>User Code: </b><?php echo $Code ?></p>
                                     
                                     <p><b>Mobile number: </b><?php echo $mobno ?></p>
                                     </b>
@@ -86,7 +120,7 @@ require('dbconn.php');
 
                                 </div>
                             </div>
-                        <br> 
+                        <br>
                         <!--directiing to other linked page -->
                         <a href="edit_student_details.php" class="btn btn-primary">Edit Details</a>
                                      
@@ -97,10 +131,19 @@ require('dbconn.php');
                 
             </div>
             <!--/.container-->
-            <div class="footer">
-            <div class="container">
+            
+        <div class="footer" style=" display : flex">
+            <div class="container"     style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        ">
+            
                 <b class="copyright">&copy; 2021 Library System </b>All rights reserved.
             </div>
+        </div>
+
         
         
         <!--/.wrapper-->
