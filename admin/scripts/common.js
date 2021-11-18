@@ -1,1 +1,1 @@
-﻿
+﻿$("#anchor-1").addClass("disabled"); // Disables visually
