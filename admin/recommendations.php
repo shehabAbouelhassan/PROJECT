@@ -69,16 +69,7 @@ if ($_SESSION['Code']) {
         <div class="container">
             <div class="row">
  <h2 style="text-align: center;margin-block: 26px;justify-content: center;display: flex;">Accpeted book Recommendations</h2>
-  <div class="span3">
-    <!-- sidebar with styled menu -->
-    <div class="sidebar">
-      <ul class="widget widget-menu styled">
-      <!-- listing itmes within the sidebar menu -->
-        
-      </ul>
-      
-    </div>
-    <!--/.sidebar-->
+  
   </div>
   <!--/.span3-->
                     
@@ -92,7 +83,6 @@ if ($_SESSION['Code']) {
                                       <th>Book Name</th>
                                       <th>Description</th>
                                       <th>Recommended By</th>
-                                      <th>Approved </th> 
                                       <th>Action </th>
                                     </tr>
                                   </thead>
@@ -112,7 +102,6 @@ if ($_SESSION['Code']) {
                                       <td><?php echo $bookname ?></td>
                                       <td><?php echo $description?></td>
                                       <td><b><?php echo strtoupper($Code)?></b></td>
-                                      <td><?php echo $accepted?></td>
                                       <td><a href="delete.php?id1=<?php echo $rid ?>&id2=<?php echo $Code ?>" class="btn btn-danger">Reject</a>
                                       <a href="acceptre.php?id1=<?php echo $rid ?>&id2=<?php echo $Code ?>" class="btn btn-success">Accept</a>
                                       
@@ -128,8 +117,47 @@ if ($_SESSION['Code']) {
                     <!--/.span9-->
                 </div>
             </div>
+            
+
             <!--/.container-->
         </div>
+        <div class="container" >
+            <div class="row">
+  
+                                    <h2 style="text-align: center;margin-block: 26px;justify-content: center;display: flex;">Summary of book recommendations</h2>
+                    <div class="span9" style="
+    display: contents;">
+        
+                        <table class="table" id = "tables">
+                                  <thead>
+                                    <tr>
+                                      <th>Book Name</th>
+                                      <th>Description</th>
+                                      <th>Recommended By</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <?php
+                            $sql="select * from LMS.recommendations";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch_assoc())
+                            {
+                                $bookname=$row['Book_Name'];
+                                $description=$row['Description'];
+                                 $Code=$row['Code'];
+                            ?>
+                                    <tr>
+                                      <td><?php echo $bookname ?></td>
+                                      <td><?php echo $description?></td>
+                                      <td><b><?php echo strtoupper($Code)?></b></td>
+
+                                    </tr>
+                               <?php } ?>
+                               </tbody>
+                                </table>
+                                </div>
+            </div>
+                            </div>
 <div class="footer" style=" display : flex">
             <div class="container"     style="
             display: flex;
